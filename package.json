@@ -1,5 +1,9 @@
 {
-  "name": "react-configuration",
+  "name": "@4chain-ag/react-configuration",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4chain-AG/react-configuration.git"
+  },
   "version": "1.0.0",
   "description": "React runtime environment variables (env) configuration",
   "main": "./dist/cjs/index.js",
