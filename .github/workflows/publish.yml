@@ -3,6 +3,9 @@ name: Publish react-configuration to GitHub npm Packages
 on:
   release:
     types: [published]
+  push:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
