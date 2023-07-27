@@ -1,0 +1,29 @@
+---
+name: Publish react-configuration to GitHub npm Packages
+on:
+  release:
+    types: [published]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup .npmrc file to publish to Github Packages
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          registry-url: https://npm.pkg.github.com
+          # Defaults to the user or organization that owns the workflow file
+          scope: "@4chain-ag"
+      - name: Install dependencies
+        run: yarn
+      - name: Build
+        run: yarn build
+      - name: Publish
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
