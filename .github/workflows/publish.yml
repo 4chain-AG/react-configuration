@@ -23,10 +23,10 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: "@4chain-ag"
       - name: Install dependencies
-        run: yarn
+        run: npm install
       - name: Build
         run: yarn build
       - name: Publish
-        run: yarn publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
