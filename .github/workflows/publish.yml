@@ -2,7 +2,8 @@
 name: Publish react-configuration to GitHub npm Packages
 on:
   release:
-    types: [published]
+    types: 
+      - published
   push:
     branches:
       - main
