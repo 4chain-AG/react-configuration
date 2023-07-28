@@ -103,6 +103,8 @@ module.exports = config.expressProxy(express);
 
 Just as in Vite, you can override just one, many or all the variables.
 
+---
+
 ### Overriding in nginx image in docker
 
 In order to override the config variables in nginx image in docker you need to:
@@ -142,6 +144,8 @@ If the file is somewhere else, you need to specify path to file:
 volumes:
   - '/path/to/env-config/json:/usr/share/nginx/html/env-config.json'
 ```
+
+---
 
 ### Using loadConfig without the ContextProvider
 
