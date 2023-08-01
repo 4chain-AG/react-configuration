@@ -53,8 +53,5 @@
     "dist",
     "LICENSE",
     "README.md"
-  ],
-  "dependencies": {
-    "@types/node": "^20.4.4"
-  }
+  ]
 }
