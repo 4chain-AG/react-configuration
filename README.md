@@ -12,16 +12,16 @@ It also provides an easy solution for overriding environment variables in nginx 
 
 ### Table of contents
 1. [How to use it](#how-to-use-it)
-    1. [Installation](#installation)
-    2. [Usage](#usage)
+    - [Installation](#installation)
+    - [Usage](#usage)
 2. [Advanced](#advanced)
-    1. [Overriding default config locally](#overriding-default-config-locally)
-        1. [In Vite](#in-vite)
-        2. [In Create-React-App (CRA)](#in-create-react-app-cra)
-    2. [Overriding in nginx image in docker](#overriding-in-nginx-image-in-docker)
-    3. [Using loadConfig without the ContextProvider](#using-loadconfig-without-the-contextprovider)
+    - [Overriding default config locally](#overriding-default-config-locally)
+        - [In Vite](#in-vite)
+        - [In Create-React-App (CRA)](#in-create-react-app-cra)
+    - [Overriding in nginx image in docker](#overriding-in-nginx-image-in-docker)
+    - [Using loadConfig without the ContextProvider](#using-loadconfig-without-the-contextprovider)
 3. [Troubleshooting](#troubleshooting)
-    1. [Null values](#null-values)
+    - [Null values](#null-values)
 
 ---
 
