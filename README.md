@@ -10,6 +10,19 @@ It works with typescript out of the box.
 
 It also provides an easy solution for overriding environment variables in nginx image in docker [see below](#Overriding-in-nginx-image-in-docker).
 
+### Table of contents
+1. [How to use it](#how-to-use-it)
+    - [Installation](#installation)
+    - [Usage](#usage)
+2. [Advanced](#advanced)
+    - [Overriding default config locally](#overriding-default-config-locally)
+        - [In Vite](#in-vite)
+        - [In Create-React-App (CRA)](#in-create-react-app-cra)
+    - [Overriding in nginx image in docker](#overriding-in-nginx-image-in-docker)
+    - [Using loadConfig without the ContextProvider](#using-loadconfig-without-the-contextprovider)
+3. [Troubleshooting](#troubleshooting)
+    - [Null values](#null-values)
+
 ---
 
 ## How to use it
@@ -158,3 +171,18 @@ const config = await loadConfigFromFile()
 ```
 
 This function will return the default config from **`config.default.json`** inside the **`public/`** directory or a merged config, if a file **`env-config.json`** is specified in the root directory of the project.
+
+---
+
+## Troubleshooting
+
+### Null values
+
+Null values in javascript/typescript are treated as non-existent, so they are not supported as values that can be overriden. Therefore, avoid null values and try to set default or empty values instead.
+
+```json
+{
+  "apiUrl": null    // WRONG ❌
+  "apiUrl": ""      // CORRECT ✅
+}
+```
